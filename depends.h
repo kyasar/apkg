@@ -1,0 +1,13 @@
+package_ptr new_package();
+void add_cached_package_to_list(package_ptr *,package_ptr);
+void list_cached_packages();
+dep_node_ptr alloc_dependency_node(char *);
+void add_dependency_node_to_list(dep_node_ptr *head, char *depname);
+char* apkg_get_next_dependency();
+void apkg_release_dependency_list();
+void apkg_release_cached();
+char **split_dependency_line(const char *);
+void graph_deps(package_ptr);
+void apkg_get_dependency_list_of_directory();
+void apkg_get_dependency_list_of_unpacked_packages();
+void apkg_get_dependency_list_of_package(char *package);
